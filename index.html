@@ -1,0 +1,796 @@
+<!doctype html>
+<html amp lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<script src="https://cdn.ampproject.org/v0.js" async></script>
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+<title>JOURNAL</title>
+<meta name="description" content="AMP Template with CSS Grid, Header, amp-sidebar & amp-social-share."/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600" rel="stylesheet">
+<link rel="canonical" href="index.html"/>
+
+<link href="https://fonts.gstatic.com" rel="dns-prefetch preconnect" crossorigin>
+
+<style amp-custom>
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;outline:0;padding:0;vertical-align:baseline}*,:before,:after{box-sizing:inherit}
+html{box-sizing:border-box;margin:0;height:100%}
+body{margin:0;background-color:#f9f9f9;font-family: 'Montserrat', sans-serif;color:#333;font-style:normal;height:100%;font-weight:500}
+a:link{color:#333;text-decoration:none;font-weight:600}
+a:visited{color:#333;text-decoration:none}
+a:hover{color:#333;text-decoration:none}
+amp-img{max-width:100%;height:auto}
+/* Header & Footer CSS */
+#WPHeader {z-index:180;padding-top: 5px;padding-bottom: 7px;margin:0;width:100%;z-index:180;box-shadow:0 1px 2px rgba(0, 0, 0, 0);background-color: #0D6EFD;}
+#WPHeader amp-img {margin-top: 7px;margin-bottom: 0px;margin-left: 5px;text-align:center;width: 148px;height: 45px}
+#WPHeader button {background:transparent;border-radius: 3px;border:2px solid rgba(0,0,0,0.14);cursor:pointer;outline:none;margin-right: 15px;margin-left: 15px;float: left;margin-top: 7px;padding-left: 3px;padding-right: 3px;padding-top: 3px ; z-index: 99999999;}
+#WPFooter{color:#fff;font-size:16px;margin:0;left:0;bottom:0;width:100%;z-index:180;font-weight:600;text-shadow:1px 1px 1px rgba(0,0,0,.3);text-align:center;padding-top: 15px;padding-bottom: 15px;background-image: linear-gradient(to right, #2980b9, #2c3e50 );}
+
+	
+/* Main Content CSS */
+main {min-height:100%;margin:0 auto;padding:0;z-index:176;max-width:1100px;padding-top:30px;padding-bottom:30px;display: grid;grid-template-columns: repeat(12, 0.5fr);grid-template-rows: auto auto auto;grid-gap:5px;}
+article { grid-column: span 4;background:#fff;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.14);box-shadow:0 1px 2px rgba(0,0,0,0.14);padding-left: 15px;padding-right: 15px;padding-top: 15px;padding-bottom: 15px;}
+article:hover{-webkit-box-shadow:0 1px 16px rgba(0,0,0,0.14);box-shadow:0 1px 16px rgba(0,0,0,0.14);}
+article h1,article h2,article h3,article h4,article h5,article h6{font-size:24px;line-height:26px;display:block;font-weight:600;margin-bottom:10px;color:#333;letter-spacing:-1px}
+article p,article q,aside p,aside q{font-size:17px;font-weight:500;line-height:24px;margin-top:5px;margin-bottom:25px;display:block}
+article header figure{margin-left:-15px;margin-right:-15px;margin-top: -15px;margin-bottom:15px;max-height:300px;overflow:hidden;z-index: 1}
+article header figure amp-img{position:relative;width:100%;}
+article header figcaption{border:0;clip:rect(0 0 0 0);height:1px;overflow:hidden;position:absolute;width:1px}	
+article header ul,article footer ul{margin: 0;margin-bottom:10px;margin-top:10px}
+article header li,article footer li{display: inline;color:#555;font-size:14px;text-transform:uppercase;font-weight:600;}
+
+/* Sidebar CSS */
+amp-sidebar{background:#fff;color:#333;font-size:2rem;padding:0px 0 0;width:20rem;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.14);box-shadow:0 1px 2px rgba(0,0,0,0.14);}
+amp-sidebar h2,amp-sidebar h3,amp-sidebar h4,amp-sidebar h5{background-color: #f9f9f9;color:#333;font-size:22px;padding-left: 15px;padding-right: 15px;padding-bottom: 7px;padding-top: 10px;font-weight:600;display: block;}
+amp-sidebar ul{list-style:none;margin:0;padding:0}
+amp-sidebar li{font-size:16px;border-top: 1px solid #eee;padding-left: 15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px}
+amp-sidebar li a{display: block;font-weight: 400;}
+amp-sidebar li:last-child{border-bottom: 1px solid #eee;padding-bottom: 5px}
+amp-sidebar::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);border-radius: 3px;background-color: #F5F5F5;}
+amp-sidebar::-webkit-scrollbar{width: 3px;background-color: #F5F5F5;}
+amp-sidebar::-webkit-scrollbar-thumb{-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.3);background-color: #F5F5F5;}
+
+.ist{background-image:url(./images/ahmed-carter-tiWcNvpQF4E-unsplash.jpg);background-position:center;
+  background-repeat:no-repeat;background-size:cover;display:flex;align-items:flex-end;justify-content:center;
+  height:50vh}.ist2{background-image:url(./images/alyssa-strohmann-2r2RUsEU1Aw-unsplash.jpg);background-position:center;
+    background-repeat:no-repeat;background-size:cover;display:flex;align-items:flex-end;justify-content:center;
+    height:50vh}.ist3{background-image:url(./images/dan-edge-VZKl6bdFqmA-unsplash.jpg);background-position:center;
+      background-repeat:no-repeat;background-size:cover;display:flex;align-items:flex-end;justify-content:center;height:50vh}
+      .ist4{background-image:url(./images/erik-mclean-wpe6ypyQrC4-unsplash.jpg);background-position:center;
+        background-repeat:no-repeat;background-size:cover;display:flex;align-items:flex-end;
+        justify-content:center;height:50vh}.ist5{background-image:url(./images/heather-ford-5gkYsrH_ebY-unsplash.jpg);
+          background-position:center;background-repeat:no-repeat;background-size:cover;display:flex;
+          align-items:flex-end;justify-content:center;height:50vh}.ist6{background-image:url(./images/jazmin-quaynor-FoeIOgztCXo-unsplash.jpg);
+            background-position:center;background-repeat:no-repeat;background-size:cover;display:flex;align-items:flex-end;
+            justify-content:center;height:50vh}button{color:#fff;background-color:#0c0d0d;font-size:14px;
+              border:1px solid #0c0d0d;padding:12px 50px;cursor:pointer}button:hover{color:#0d0d0d;
+                background-color:#fff}#top{background:#ede7e7;font-family:Anton,sans-serif;
+                  font-weight:bolder}#top strong{padding:0;margin:0}#top a,#top label{text-decoration:none;
+                    color:#555}#top ul{list-style:none;padding:0}#top header{box-shadow:2px 9px 49px -17px rgba(0,0,0,.3);
+                      position:sticky;top:0;width:100%;z-index:10}#top .header-content-top{background:#fff;height:30px;
+                        width:100%}.header-content-top{padding:1%;margin-bottom:-12px}#top .header-content-top .content{align-items:center;
+                          display:flex;height:30px;justify-content:flex-start;margin:0 auto;max-width:1300px;width:100%}#top .header-content-top .content span{color:#000;font-size:15px;margin:0 15px}
+                          #top .header-content-top .content span .fas{margin-right:5px}#top .container{align-items:center;display:flex;height:70px;
+                            justify-content:space-between;margin:0 auto;max-width:1300px;padding:0 15px;position:absolute;top:-150%;left:65px;width:100%}
+                            #top .container .logo{color:#000;font-size:40px;line-height:20px;padding-right:15px}#top .container .open-search{border-radius:3px;flex:auto;margin:0 1px;overflow:hidden;position:relative}
+                            @media (max-width:991px){#top .container .open-search{margin:0;position:static;text-align:right}}#top .container .open-search .fa-search{display:none}@media (max-width:991px)
+                            {#top .container .open-search .fa-search{display:block}}#top .container .open-search .input-open-search{display:none}
+                            #top .container .open-search .input-open-search:checked~.search{display:block}@media (max-width:991px){#top .container .search{display:none;position:absolute;left:0;top:70px;width:100%;z-index:999}}
+                            #top .container .search .input-search{border-radius:3px;border:1px solid #e1e1e1;height:40px;padding:0 70px 0 15px;width:100%;background:#fff no-repeat;transition:.1s all linear 0s;
+                              background-image:linear-gradient(to bottom,rgba(77,97,252,.63) 0,#4d61fc 90%),linear-gradient(to bottom,#e1e1e1,#e1e1e1);
+                              background-size:0 2px,100% 1px;background-position:50% 100%,50% 100%;transition:background-size .3s cubic-bezier(.64, .09, .08, 1)}
+                              #top .container .search .input-search:focus{background-size:100% 2px,100% 1px;outline:0}
+                              #top .container .search .button-search{background:#0d6efd;border:0;color:#fff;cursor:pointer;padding:13px 20px;position:absolute;right:0;top:0}
+                              #top .container .search .button-search .fa-search{display:block}#top .container .nav-content .nav-content-list{align-items:center;display:flex;justify-content:space-between;padding:0 15px}
+                              #top .container .nav-content .nav-content-list .nav-content-item{align-items:center;display:flex;height:40px;margin:0 5px;position:relative;transition:.1s all linear 0s}
+                              @media (max-width:991px){#top .container .nav-content .nav-content-list .nav-content-item{padding:0 5px}}
+                              #top .container .nav-content .nav-content-list .nav-content-item .item-arrow{margin-left:5px;position:relative;top:-3px}
+                              @media (max-width:768px){#top .container .nav-content .nav-content-list .nav-content-item .item-arrow{display:none}
+                              #top .container .logo{font-size:29px}#top .container{top:-150%;left:41px}#WPHeader button{background:0 0;border-radius:0;border:0 solid rgba(0,0,0,.14);
+                                cursor:pointer;outline:0;margin-right:8px;margin-left:7px;float:left;margin-top:7px;padding-left:0;padding-right:0;padding-top:7px;z-index:99999999}
+                                .header-content-top{padding:0 5%}#top .container .nav-content .nav-content-list{align-items:center;display:flex;justify-content:space-betw;padding:0 39px}}
+                                #top .container .nav-content .nav-content-list .nav-content-item .open-menu-login-account{align-items:center;cursor:pointer;display:flex;position:relative}
+                                #top .container .nav-content .nav-content-list .nav-content-item .input-menu{display:none}#top .container .nav-content .nav-content-list .nav-content-item .input-menu:checked~.login-list{display:block}
+                                #top .container .nav-content .nav-content-list .nav-content-item .login-list{background:#fff;border-radius:3px;box-shadow:2px 9px 49px -17px rgba(0,0,0,.3);display:none;overflow:hidden;position:absolute;right:0;top:28px;
+                                  transition:.1s all linear 0s;width:200px;z-index:10}#top .container .nav-content .nav-content-list .nav-content-item .login-list .login-list-item{padding:15px 20px}#top .container .nav-content .nav-content-list .nav-content-item .login-list .login-list-item:hover{background:#0d6efd}
+                                  #top .container .nav-content .nav-content-list .nav-content-item .login-list .login-list-item:hover a{color:#000}#top .container .nav-content .nav-content-list .nav-content-item:nth-child(2):hover .fas{color:#0d6efd}#top .container .nav-content .nav-content-list .nav-content-item:hover .fas{color:#0d6efd}
+                                  #top .container .nav-content .nav-content-list .account-login .login-text{align-items:end;display:flex;flex-direction:column;font-size:12px;margin-left:5px}@media (max-width:991px){#top .container .nav-content .nav-content-list .account-login .login-text{display:none}}#top .container .nav-content .nav-content-list .account-login .login-text strong{display:block}#top .container .nav-content .nav-content-list .nav-content-link{border-radius:3px;font-size:19px;padding:10px 15px;transition:.1s all linear 0s}
+                                  @media (max-width:991px){#top .container .nav-content .nav-content-list .nav-content-link{padding:0}}#top .nav-container{align-items:center;display:flex;margin:0;max-width:1500px;width:103%}#top .nav-container .nav-row{align-items:center;display:flex;height:40px;justify-content:space-between;margin:0;padding:0}@media (max-width:991px){#top .nav-container .nav-row{display:none}}.blog{color:#000;position:relative}.blog::after{content:"SALE";color:#fff;background-color:#ff4500;position:absolute;top:-20%;right:0;padding:2%}
+                                  .blog1::after{content:"2";color:#fff;background-color:#ffc107;position:absolute;top:-20%;right:0;
+                                  padding:5% 5%}#top .nav-container .nav-row .nav-row-list{flex:auto;background-color:#0d6efd;
+                                    color:#fff}#top .nav-container .nav-row .nav-row-list .nav-row-list-link{align-items:center;
+                                      display:flex;height:40px;justify-content:center;transition:.1s all linear 0s;color:#fff}
+                                      #top .nav-container .nav-row .nav-row-list .nav-row-list-link:hover{background:#e1e1e1;
+                                        width:100%;color:#000}#top .nav-container .featured-category{flex:auto;margin:0 15px 0 0
+                                        }@media (max-width:991px){#top .nav-container .featured-category{display:none}}
+                                        #top .nav-container .all-navigator{align-items:center;background:#ffc107;color:#000;font-weight:bolder;display:flex;height:40px;padding:0 25px;width:100%
+                                        }@media (max-width:991px){#top .nav-container .all-navigator{margin-right:0}}#top .nav-container .all-navigator .fa-angle-down,#top .nav-container .all-navigator .fa-angle-up{position:absolute;right:25px}
+                                        #top .nav-container .all-navigator .fa-angle-up{display:none}#top .nav-container .all-navigator .fas{font-size:16px;margin-right:0}#top .nav-container .all-navigator span{margin-left:15px}#top .nav-container 
+                                        .all-category-nav{cursor:pointer;max-width:300px;position:relative;width:100%}@media (max-width:991px){#top .nav-container .all-category-nav{max-width:100%}}#top .nav-container .all-category-nav .open-menu-all{align-items:center;cursor:pointer;display:flex;position:relative}
+                                        #top .nav-container .all-category-nav .input-menu-all{display:none}#top .nav-container .all-category-nav .input-menu-all:checked~.all-category-list{display:block}#top .nav-container .all-category-nav .input-menu-all:checked+.all-navigator .fa-angle-down{display:none}#top .nav-container .all-category-nav .input-menu-all:checked+.all-navigator .fa-angle-up{display:block}#top .nav-container .all-category-list{background:#fff;border-bottom:3px solid #0d6efd;box-shadow:2px 9px 49px -17px rgba(0,0,0,.3);display:none;height:auto;min-height:300px;padding:15px 0;position:absolute;top:24px;width:300px;z-index:90
+                                        }@media (max-width:991px){#top .nav-container .all-category-list{min-width:100%}}#top .nav-container .all-category-list-item:hover{display:block;background:#0d6efd}#top .nav-container .all-category-list-item:hover .category-second-list{left:100%;opacity:1;visibility:visible}#top .nav-container .all-category-list-item:hover .all-category-list-link{color:#fff}#top .nav-container .all-category-list-link{align-items:center;display:flex;justify-content:space-between;padding:15px;transition:.1s all linear 0s}#top .nav-container .category-second-list{background:#fff;border-bottom:3px solid #0d6efd;box-shadow:inset 44px -1px 88px -59px rgba(0,0,0,.37);display:flex;height:322px;left:80%;min-height:297px;min-width:400px;opacity:0;position:absolute;top:0;transition:.1s all linear 0s;visibility:hidden;width:auto}
+                                        
+                                        @media (max-width:991px){#top .nav-container .category-second-list{display:none}}#top .nav-container .category-second-list .img-product-menu img{max-width:200px;height:100%}#top .nav-container .category-second-list-ul{display:flex;flex-direction:column;min-width:400px;padding:0 15px}
+                                        #top .nav-container .category-second-item a{align-items:center;display:flex;justify-content:space-between;padding:15px}#top .nav-container .category-second-item:hover{background:#0d6efd}#top .nav-container .category-second-item:hover a{color:#fff}#top .fa-bars{font-size:28px}#WPFooter{background-image:none}.footer{width:100%;position:relative;height:auto;background-color:#0c0c0c}.footer .col{width:190px;height:auto;float:left;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:0 20px 20px 20px}
+                                        .footer .col h1{margin:0;padding:0;font-family:inherit;font-size:12px;line-height:17px;padding:20px 0 5px 0;color:rgba(255,255,255,.267);font-weight:400;text-transform:uppercase;letter-spacing:.25em}
+                                        .footer .col ul{list-style-type:none;margin:0;padding:0}.footer .col ul li{color:#999;font-size:14px;font-family:inherit;font-weight:700;padding:5px 0 5px 0;cursor:pointer;transition:.2s;-webkit-transition:.2s;-moz-transition:.2s}
+                                        .social ul li{display:inline-block;padding-right:5px!important}.footer .col ul li:hover{color:#fff;transition:.1s;-webkit-transition:.1s;-moz-transition:.1s}.clearfix{clear:both}@media only screen and (min-width:1280px){.contain{width:1200px;margin:0 auto}}
+                                        @media only screen and (max-width:1139px){.contain .social{width:1000px;display:block}.social h1{margin:0}}@media only screen and (max-width:950px){.footer .col{width:33%}.footer .col h1{font-size:14px}.footer .col ul li{font-size:13px}}
+                                        @media only screen and (max-width:500px){.footer .col{width:50%}.footer .col h1{font-size:14px}.footer .col ul li{font-size:13px}}@media only screen and (max-width:340px){.footer .col{width:100%}}@media (max-width:1024px){main{padding-left:15px;padding-right:15px;padding-bottom:15px;padding-top:15px;grid-gap:10px}article{grid-column:span 2}}
+                                        @media (max-width:800px){main{padding-left:15px;padding-right:15px;padding-bottom:15px;padding-top:15px;grid-gap:10px}article{grid-column:span 4}}@media (max-width:767px){article{grid-column:span 6}}.content span{margin:0 1%;font-size:13px}
+
+
+
+  </style>
+  <header>
+    <div class="header-content-top">
+      <div class="content">
+        <span><i class="fas fa-home"> </i> HOME</span>
+        <span><i class="fas fa-briefcase"> </i> ABOUT US</span>
+        <span> <i class="fas fa-envelope"> </i>CONTACT</span>
+        <span>      <i class="fas fa-question-circle"> </i>FAQ</span>
+        
+    
+      </div>
+    </div>
+
+
+    
+  </header>
+
+
+<meta itemprop="accessibilityControl" content="fullKeyboardControl">
+<meta itemprop="accessibilityControl" content="fullMouseControl">
+<meta itemprop="accessibilityHazard" content="noFlashingHazard">
+<meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
+<meta itemprop="accessibilityHazard" content="noSoundHazard">
+
+<header id="WPHeader">
+<a rel="home" href=""><amp-img title="" alt="" width="148" height="38" src=""></amp-img></a>
+<button on="tap:SidebarNavigation.toggle" id="Menu" aria-label="Topics"><svg fill="#fff" height="28" viewBox="0 0 24 24" width="28"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+
+</header>
+	
+
+<amp-sidebar id="SidebarNavigation" layout="nodisplay" side="left">
+<h2>Categories</h2>
+<ul>
+<li><a rel="bookmark" title="Blog" href="#">Blog</a></li>
+<li><a rel="bookmark" title="People" href="#">People</a></li>
+<li><a rel="bookmark" title="Nature" href="#">Nature</a></li>
+<li><a rel="bookmark" title="Photography" href="#">Photography</a></li>
+<li><a rel="bookmark" title="Architecture" href="#">Architecture</a></li>
+<li><a rel="bookmark" title="Fashion" href="#">Fashion</a></li>
+<li><a rel="bookmark" title="Business" href="#">Business</a></li>
+<li><a rel="bookmark" title="Entertainment" href="#">Entertainment</a></li>
+</ul>
+</amp-sidebar>
+<amp-sidebar id="SidebarTopics" layout="nodisplay" side="left">
+<h3>Explore Topics</h3>
+<ul>
+<li><a title="Make A Wish" href="#">Make A Wish</a></li>
+<li><a title="The Morning Dew" href="#">The Morning Dew</a></li>
+<li><a title="Purple Haze" href="#">Purple Haze</a></li>
+<li><a title="Bridge To Nowhere" href="#">Bridge To Nowhere</a></li>
+<li><a title="The Lonely Ladybug" href="#">The Lonely Ladybug</a></li>
+<li><a title="Monkeys Take a Bath" href="#">Monkeys Take a Bath</a></li>
+<li><a title="Birds of Beauty" href="#">Birds of Beauty</a></li>
+<li><a title="Summer Wheat" href="#">Summer Wheat</a></li>
+<li><a title="Calm Before The Storm" href="#">Calm Before The Storm</a></li>
+<li><a title="Bamboo Shoots" href="#">Bamboo Shoots</a></li>
+</ul>
+<h4>Explore Topics</h4>
+<ul>
+<li><a title="Make A Wish" href="#">Make A Wish</a></li>
+<li><a title="The Morning Dew" href="#">The Morning Dew</a></li>
+<li><a title="Purple Haze" href="#">Purple Haze</a></li>
+<li><a title="Bridge To Nowhere" href="#">Bridge To Nowhere</a></li>
+<li><a title="The Lonely Ladybug" href="#">The Lonely Ladybug</a></li>
+<li><a title="Monkeys Take a Bath" href="#">Monkeys Take a Bath</a></li>
+<li><a title="Birds of Beauty" href="#">Birds of Beauty</a></li>
+<li><a title="Summer Wheat" href="#">Summer Wheat</a></li>
+<li><a title="Calm Before The Storm" href="#">Calm Before The Storm</a></li>
+<li><a title="Bamboo Shoots" href="#">Bamboo Shoots</a></li>
+</ul>
+</amp-sidebar>	
+
+
+<header id="top"> 
+	
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
+
+<header>
+  <!-- contact content -->
+
+  <!-- / contact content -->
+  <div class="container">
+    <!-- logo -->
+    <strong class="logo">JOURNAL</strong>
+    <!-- open nav mobile -->
+
+    <!--search -->
+    <label class="open-search" for="open-search">
+      <i class="fas fa-search"></i>
+            <input class="input-open-search" id="open-search" type="checkbox" name="menu" />
+    <div class="search">
+      <button class="button-search"><i class="fas fa-search"></i></button>
+      <input type="text" placeholder="What are you looking for?" class="input-search"/>
+    </div>
+    </label>
+    <!-- // search -->
+    <nav class="nav-content">
+      <!-- nav -->
+      <ul class="nav-content-list">
+        <li class="nav-content-item account-login">
+          <label class="open-menu-login-account" for="open-menu-login-account">
+
+            <input class="input-menu" id="open-menu-login-account" type="checkbox" name="menu" />
+
+            <i class="fas fa-user-circle"></i> <span class="item-arrow"></span>
+
+            <!-- submenu -->
+            <ul class="login-list">
+              <li class="login-list-item"><a href="#">My account</a></li>
+              <li class="login-list-item"><a href="#">Create account</a></li>
+              <li class="login-list-item"><a href="#">logout</a></li>
+              </label>
+            </ul>
+        </li>
+        <li class="nav-content-item"><a class="nav-content-link" href="#"><i class="fas fa-heart"></i></a></li>
+        <li class="nav-content-item blog1"><a class="nav-content-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+        <!-- call to action -->
+      </ul>
+    </nav>
+  </div>
+  <!-- nav navigation commerce -->
+  <div class="nav-container">
+    <nav class="all-category-nav">
+      <label class="open-menu-all" for="open-menu-all">
+        <input class="input-menu-all" id="open-menu-all" type="checkbox" name="menu-open" />
+        <span class="all-navigator"><i class="far fa-building"> </i> <span>ALL DEPARTMENT</span> <i class="fas fa-angle-down"></i>
+          <i class="fas fa-angle-up"></i>
+        </span>
+
+        <ul class="all-category-list">
+          <li class="all-category-list-item"><a href="#" class="all-category-list-link">ELECTRONICS<i class="fas fa-angle-right"></i></a>
+            <div class="category-second-list">
+              <ul class="category-second-list-ul">
+                <li class="category-second-item"><a href="#">Iphone</a></li>
+                <li class="category-second-item"><a href="#">Galaxy Note 10</a></li>
+                <li class="category-second-item"><a href="#">Motorola One </a></li>
+                <li class="category-second-item"><a href="#">Galaxy A80 </a></li>
+                <li class="category-second-item"><a href="#">Galaxy M </a></li>
+                <li class="category-second-item"><a href="#">Huaway P30 </a></li>
+              </ul>
+
+              <div class="img-product-menu"><img src="./images/toppng.com-photo-camera-512x512.png"></div>
+              </div>
+          </li>
+          <li class="all-category-list-item"><a href="#" class="all-category-list-link">Furniture <i class="fas fa-angle-right"></i></a></li>
+          <li class="all-category-list-item"><a href="#" class="all-category-list-link">Toys<i class="fas fa-angle-right"></i></a></li>
+          <li class="all-category-list-item"><a href="#" class="all-category-list-link">Computing<i class="fas fa-angle-right"></i></a></li>
+          <li class="all-category-list-item"><a href="#" class="all-category-list-link">Games<i class="fas fa-angle-right"></i></a></li>
+          <li class="all-category-list-item"><a href="#" class="all-category-list-link">Automotive<i class="fas fa-angle-right"></i></a></li>
+
+        </ul>
+      </label>
+
+    </nav>
+    <nav class="featured-category">
+      <ul class="nav-row">
+        <li class="nav-row-list"><a href="#" class="nav-row-list-link">MULTILEVEL</a></li>
+        <li class="nav-row-list"><a href="#" class="nav-row-list-link">MEGA MENU</a></li>
+        <li class="nav-row-list"><a href="#" class="nav-row-list-link">FULL WIDTH</a></li>
+        <li class="nav-row-list"><a href="#" class="nav-row-list-link"></a></li>
+        <li class="nav-row-list blog" style="background-color: #FFC107; color:black;"><a href="#" class="nav-row-list-link">BLOG</a></li>
+        <li class="nav-row-list"><a href="#" class="nav-row-list-link"></a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+</header>
+
+
+
+
+
+<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+
+<section id="mainBanner">
+  
+  <div class="mainCol1">
+    <amp-carousel id="custom-button" width="400" height="210" layout="responsive" type="slides" autoplay delay="2000"> 
+      <amp-img src="./images/3bannerImage.PNG" width="400" height="300" layout="responsive" alt="a sample image"></amp-img>
+       <amp-img src="./images/2bannerImage.PNG" width="400" height="300" layout="responsive" alt="another sample image"></amp-img>
+        <amp-img src="./images/1bannerImage.PNG" width="400" height="300" layout="responsive" alt="and another sample image"></amp-img>
+    </amp-carousel>
+  </div>
+  <div class="mainCol2"></div>
+
+
+
+
+
+
+</section>
+
+<style amp-custom>
+
+  #mainBanner{
+    width: 100%;
+    height: 60vh;
+    background: #000;
+    box-sizing: border-box;
+    display: flex;
+
+  }
+  #mainBanner .mainCol1{
+    width: 60%;
+    height: 100%;
+    background: red;
+  }
+  #mainBanner .mainCol2{
+    width: 40%;
+    height: 100%;
+    background-image: url("./images/hp-8300-desktop-500x500.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box
+  }
+
+
+  @import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+img{background:#ecf0f1;width:100%;max-width:100%;height:auto;margin-bottom:15px;transition:all .9s}
+.container a.img,.container .separator a{margin-left:0!important;margin-right:0!important}
+
+
+.container {
+  max-width: 768px;
+  margin: 4% auto;
+  padding: 20px;
+  background: #fff;
+  color: #222;
+  font-size: 16px;
+  line-height: 1.6;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 600px){
+
+  
+  #mainBanner{
+    width: 100%;
+    height: 25vh;
+    
+  }
+
+  #mainBanner .mainCol1{
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  #mainBanner .mainCol2{
+    width: 0%;
+    height: 0%;
+    background: blue;
+  }
+  
+}
+</style>
+
+
+
+
+<div class="ourUS">
+  <div class="details"></div>
+
+</div>
+
+<style amp-custom>
+  .ourUS{
+    width: 100%;
+    height: 15vh;
+  }
+  .ourUS .details{
+    background-image: url(./images/img.PNG);
+    width: 100%;
+    background-clip: inherit;
+    background-attachment:scroll;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    
+  }
+
+  @media only screen and (max-width: 600px){
+    .ourUs .details{
+      width: 50%;
+    }
+  }
+</style>
+
+<section class="seller">
+  <h2> Why buy from us ?                 </h2>
+  <hr>
+  <p> Jourmal has been the best selling and most loved Opencart theme since first launch in 2013 . Tried ans tested by over 20K people,          Jourmal is the best Opencart theme framework on the market today ;        </p>
+</section>
+
+
+
+<div class="categories_nav">
+  <div class="row  d-flex nowrap justify-content-center ">
+     <div  class=" col  col-4 main    bg-primary "  >
+        
+        <p> TOP CATEGORIES</p>
+     </div>
+     <div class="col ">
+        <p > ELECTRONICS</p>
+     </div>
+     <div class="col">
+        <p > BEAUTY</p>
+     </div>
+     <div class="col">
+        <p > FASHION</p>
+     </div>
+  </div>
+</div>
+
+<style amp-custom>
+
+.categories_nav .row{display:flex;justify-content:center;align-items:center}.categories_nav .col{background:grey;color:#000;padding:0 2%}.categories_nav .bg-primary{background-color:#0D6EFD;position:relative}
+.categories_nav p{color:#000}.categories_nav .bg-primary p{color:#fff;font-weight:700}.categories_nav 
+.bg-primary::after{background-color:#0D6EFD;position:absolute;bottom:-15px;content:"h";color:#0D6EFD;
+padding:0 6%;clip-path:polygon(49% 100%,0 0,100% 0)}@media only screen and (max-width: 500px)
+{.categories_nav .bg-primary::after{background-color:#0D6EFD;position:absolute;bottom:-14px;content:"h";color:#0D6EFD;padding:0 2%;clip-path:polygon(49% 100%,0 0,100% 0)}.categories_nav .col{padding:0 .5%}.categories_nav{font-size:12px}}
+.seller{text-align:center;padding:2% 10%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;
+  justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.seller h2{font-family:'Passion One',cursive;font-size:50px}.seller hr{color:#ff4500;width:20%;border:1px solid}@media screen and (max-width: 691px)
+  {.seller h2{font-family:'Passion One',cursive;font-size:30px}.seller p{font-size:12px}}
+  
+</style>
+
+
+
+
+<main >
+<article class="ist">
+<header>
+<!-- <figure><a title="Article Headline" href="#"><amp-img title="Article Headline" alt="Article Headline" width="100" height="200" src="./images/ahmed-carter-tiWcNvpQF4E-unsplash.jpg" layout="responsive"></amp-img></a></figure>
+<a title="Article Headline" href="#"><h2>Article Headline</h2></a> -->
+
+</header>
+
+<footer>
+
+    <button type="button" name="myButton" autofocus>EXPLORE</button>
+
+</footer>
+</article>
+
+<article class="ist2">
+	<header>
+	<!-- <figure><a title="Article Headline" href="#"><amp-img title="Article Headline" alt="Article Headline" width="100" height="200" src="./images/ahmed-carter-tiWcNvpQF4E-unsplash.jpg" layout="responsive"></amp-img></a></figure>
+	<a title="Article Headline" href="#"><h2>Article Headline</h2></a> -->
+	
+	</header>
+	
+	<footer>
+	
+		<button type="button" name="myButton" autofocus>EXPLORE</button>
+	
+	</footer>
+	</article>
+	
+	<article class="ist3">
+		<header>
+		<!-- <figure><a title="Article Headline" href="#"><amp-img title="Article Headline" alt="Article Headline" width="100" height="200" src="./images/ahmed-carter-tiWcNvpQF4E-unsplash.jpg" layout="responsive"></amp-img></a></figure>
+		<a title="Article Headline" href="#"><h2>Article Headline</h2></a> -->
+		
+		</header>
+		
+		<footer>
+		
+			<button type="button" name="myButton" autofocus>EXPLORE</button>
+		
+		</footer>
+		</article>
+
+
+    <article class="ist4">
+      <header>
+      <!-- <figure><a title="Article Headline" href="#"><amp-img title="Article Headline" alt="Article Headline" width="100" height="200" src="./images/ahmed-carter-tiWcNvpQF4E-unsplash.jpg" layout="responsive"></amp-img></a></figure>
+      <a title="Article Headline" href="#"><h2>Article Headline</h2></a> -->
+      
+      </header>
+      
+      <footer>
+      
+        <button type="button" name="myButton" autofocus>EXPLORE</button>
+      
+      </footer>
+      </article>
+
+      <article class="ist5">
+        <header>
+        <!-- <figure><a title="Article Headline" href="#"><amp-img title="Article Headline" alt="Article Headline" width="100" height="200" src="./images/ahmed-carter-tiWcNvpQF4E-unsplash.jpg" layout="responsive"></amp-img></a></figure>
+        <a title="Article Headline" href="#"><h2>Article Headline</h2></a> -->
+        
+        </header>
+        
+        <footer>
+        
+          <button type="button" name="myButton" autofocus>EXPLORE</button>
+        
+        </footer>
+        </article>
+
+        <article class="ist6">
+          <header>
+          <!-- <figure><a title="Article Headline" href="#"><amp-img title="Article Headline" alt="Article Headline" width="100" height="200" src="./images/ahmed-carter-tiWcNvpQF4E-unsplash.jpg" layout="responsive"></amp-img></a></figure>
+          <a title="Article Headline" href="#"><h2>Article Headline</h2></a> -->
+          
+          </header>
+          
+          <footer>
+          
+            <button type="button" name="myButton" autofocus>EXPLORE</button>
+          
+          </footer>
+          </article>
+
+		</main>
+
+    <section class="seller">
+      <h2> Featured Products                  </h2>
+      <hr>
+      <p> Jourmal has been the best selling and most loved Opencart theme since first launch in 2013 . Tried ans tested by over 20K people,          Jourmal is the best Opencart theme framework on the market today ;        </p>
+   </section>
+   <section class="categories">
+      <div class="categories_nav">
+         <div class="row  d-flex nowrap justify-content-center ">
+            <div  class=" col col-4 main    bg-primary "  >
+           
+               <p> FEATURED</p>
+            </div>
+            <div class="col ">
+               <p > LATEST</p>
+            </div>
+            <div class="col">
+               <p > BESTSELLER</p>
+            </div>
+            <div class="col">
+               <p > SPECIALS</p>
+            </div>
+         </div>
+      </div>
+
+		<main>           
+	
+		<article class="ist">
+			<header>
+			<!-- <figure><a title="Article Headline" href="#"><amp-img title="Article Headline" alt="Article Headline" width="100" height="200" src="./images/ahmed-carter-tiWcNvpQF4E-unsplash.jpg" layout="responsive"></amp-img></a></figure>
+			<a title="Article Headline" href="#"><h2>Article Headline</h2></a> -->
+			
+			</header>
+			
+			<footer>
+			
+				<button type="button" name="myButton" autofocus>EXPLORE</button>
+			
+			</footer>
+			</article>
+	
+			<article class="ist2">
+				<header>
+				<!-- <figure><a title="Article Headline" href="#"><amp-img title="Article Headline" alt="Article Headline" width="100" height="200" src="./images/ahmed-carter-tiWcNvpQF4E-unsplash.jpg" layout="responsive"></amp-img></a></figure>
+				<a title="Article Headline" href="#"><h2>Article Headline</h2></a> -->
+				
+				</header>
+				
+				<footer>
+				
+					<button type="button" name="myButton" autofocus>EXPLORE</button>
+				
+				</footer>
+				</article>
+	
+				<article class="ist3">
+					<header>
+					<!-- <figure><a title="Article Headline" href="#"><amp-img title="Article Headline" alt="Article Headline" width="100" height="200" src="./images/ahmed-carter-tiWcNvpQF4E-unsplash.jpg" layout="responsive"></amp-img></a></figure>
+					<a title="Article Headline" href="#"><h2>Article Headline</h2></a> -->
+					
+					</header>
+					
+					<footer>
+					
+						<button type="button" name="myButton" autofocus>EXPLORE</button>
+					
+					</footer>
+					</article>
+	
+
+</main>
+
+
+<!--FOOTER START-->
+
+
+<footer class="endfoote">
+  <div class="contact">
+    <h6>contact us</h6>
+    <p class="one">Hi, we are always open for cooperation and suggestions,<br> contact us in one of the ways below</p>
+    <div class="details">
+      <div>
+        <p>phone number</p>
+        <span><a href="">+1 (800)060-07-30</a></span>
+      </div> 
+      <div> 
+        <p>email address</p>
+        <span><a href=""> us@example.com</a></span>
+      </div>
+      <div>
+        <p>our location</p>
+        <span>751 Fake Street,New York<br> 10021 USA</span>
+      </div> 
+      <div>
+        <p>working hours</p>
+        <span>Mon-Sat 10.00am-7.00pm</span>
+      </div> 
+    </div>  
+  </div>
+  <div class="information">
+    <h6>information</h6>
+    <p>about us</p>
+    <p>delivery information</p>
+    <p>privacy policy</p>
+    <p>brands</p>
+    <p>contact us</p>
+    <p>returns</p>
+    <p>site map</p>
+  </div>
+  <div class="account">
+    <h6>my account</h6>
+    <p>store location</p>
+    <p>order history</p>
+    <p>wish list</p>
+    <p>newsletter</p>
+    <p>special offers</p>
+    <p>gift certificates</p>
+    <p>affiliate</p>
+  </div>
+  <div class="newsletter">
+    <h6>newsletter</h6>
+    <p>enter your email address below to subscribe to our newsletter<br>
+    and keep up to date with discounts and special offers</p>    
+    <input type="email" name="email" placeholder="user@example.com">
+    <button>Subscribe</button>
+    <p>follow us on social networks</p>
+    <a href=""><i class="fab fa-facebook-f"></i></a>
+    <a href=""><i class="fab fa-twitter"></i></a>
+    <a href=""><i class="fab fa-youtube"></i></a>
+    <a href=""><i class="fab fa-instagram"></i></a>
+    <a href=""><i class="fas fa-rss"></i></a>
+  </div>
+
+
+  <div class="footer-2">
+  <p>JOURNAL.COM</p>
+  <div class="icons">
+    <a href=""><i class="fab fa-cc-paypal" style="font-size:20px;"></i></a>
+    <a href=""><i class="fab fa-cc-visa" style="font-size:20px;"></i></a>
+    <a href=""><i class="fab fa-cc-amex" style="font-size:20px;"></i></a>
+    <a href=""><i class="fab fa-cc-mastercard" style="font-size:20px;"></i></a>
+    <a href=""><i class="fab fa-cc-mastercard" style="font-size:20px;"></i></a>
+  </div>  
+</div>
+</footer>
+
+
+<style amp-custom>
+  .endfoote{font-family:arial,tahoma;font-size:9px;color:#fff;text-transform:capitalize;box-sizing:border-box;width:auto;background-color:#333;padding:0 160px;display:flex;flex-wrap:wrap;
+    justify-content:space-between}p{line-height:180%;color:#a29e9e}h6,div{margin-bottom:20px}h6{margin-top:25px;font-size:12px}a{text-decoration:none;color:#fff}.endfoote div 
+    .one{margin-bottom:20px;text-transform:none}.endfoote .details{display:flex;flex-wrap:wrap}.endfoote .details div{width:150px;margin-right:20px}.endfoote .details div p{text-transform:uppercase}
+    .endfoote .details div span{margin-bottom:20px}.endfoote .contact{width:340px}.endfoote .information{margin-right:20px}.endfoote .information p{margin-bottom:8px}.endfoote .account p{margin-bottom:8px;width:150px}
+    .endfoote .newsletter p,input{padding:5px}.endfoote .newsletter input{width:170px;margin-bottom:20px;border-style:none;background-color:#4d4d4d;color:#a29e9e}.endfoote .newsletter input::placeholder{color:#a29e9e;font-size:10px}
+    .endfoote .newsletter button{padding:7px 12px;margin-left:4px;color:#fff;background-color:red;font-size:10px;border-style:none}.endfoote .newsletter a{display:inline-block;width:20px;height:20px;margin-right:5px;border-radius:50%;text-align:center;line-height:20px}
+    .endfoote .newsletter a:first-of-type{background-color:#4267B2}.endfoote .newsletter a:nth-of-type(2){background-color:#1da1f2}.endfoote .newsletter a:nth-of-type(3){background-color:red}.endfoote .newsletter a:nth-of-type(4){background-color:#8a50ca}
+    .endfoote .newsletter a:last-of-type{background-color:#eeaa2f;color:#333}a:hover{color:rgba(0,0,0,.3);transform:scale(1.3);transition:all .2s ease-in-out}@media (max-width: 767px){footer{padding:15px 30px;justify-content:initial}.endfoote .information{width:120px}
+    .endfoote .account{width:120px}}.endfoote .footer-2{width:100%;height:45px;padding:15px 180px;background-color:#252121;position:relative}.endfoote .footer-2 p{color:gray;display:inline-block;position:absolute;top:15px}.endfoote .footer-2 p span{color:#fff}
+    .endfoote .footer-2 .icons{float:right}.endfoote .footer-2 a{display:inline-block;margin-right:4px}.endfoote .footer-2 a:first-of-type{background-color:#31abea;color:#fff}.endfoote .footer-2 a:nth-of-type(2){background-color:#14226b;color:#fff}
+    .endfoote .footer-2 a:nth-of-type(3){background-color:#31abea;color:#fff}.endfoote .footer-2 a:nth-of-type(4){background-color:orange;color:#fff}.endfoote .footer-2 a:last-of-type{background-color:#31abea;color:#fff}@media (max-width: 767px)
+    {.endfoote .footer-2{padding:5px 20px;height:80px}.endfoote .footer-2 p{padding:5px 15px;float:none;position:static}.endfoote .footer-2 .icons{padding:5px 15px;float:none}}
+  
+  
+  
+  
+  
+  @media  (max-width: 600px){
+    
+    .endfoote{
+      padding: 4px 28px;
+    }
+  }
+ 
+ </style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+<!--FOOTER END-->
+
+
+
+    <!-- POP UP-->
+    <section class="pop_bg">
+      <div class="popup">
+        <div class="contextBox">
+            <div class="close"></div>
+            <div class="imgBx">
+                <img src="./images/coupon.png">
+            </div>
+            <div class="content">
+            <div>
+                <h3>Special offer</h3>
+                <h2>80<sup>%</sup><span>OFF</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit ducimus aut debitis unde. Provident, voluptates. Corporis harum magni, enim corrupti iste totam quo beatae, sapiente, eaque praesentium laudantium rerum officia?</p>
+                <a href="#">Get the deal</a>
+            </div>
+            </div>
+        </div>
+  
+      </section>
+  
+    
+        <script>
+            const popup = document.querySelector('.popup');
+            const close = document.querySelector('.close');
+            const pop_bg = document.querySelector('.pop_bg');
+    
+            window.onload = function(){
+                setTimeout(function(){
+                    popup.style.display = "block"
+                    pop_bg.style.width = "100%"
+                } ,5000)
+            }
+    
+            close.addEventListener('click', ()=>{
+                popup.style.display = "none";
+                pop_bg.style.width = "0"
+            })
+        </script>
+
+
+
+
+<style amp-custom>
+.pop_bg{width:0%;height:100vh;background:rgba(0,0,0,.555);position:fixed;top:0;left:0}.popup{position:fixed;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);display:none}.contextBox{position:relative;width:600px;height:400px;background:#fff;border-radius:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-shadow:0 5px 15px rgba(0,0,0,.1);box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.contextBox .imgBx{position:relative;width:300px;height:400px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.contextBox .imgBx::before{content:"";position:absolute;width:250px;height:250px;background:#e7ffe0;border-radius:50%}.contextBox .imgBx img{position:relative;max-width:250px;z-index:1}
+.contextBox .content{position:relative;width:300px;height:400px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.contextBox .content h3{color:#000;line-height:1em;font-weight:300;font-size:2em}.contextBox .content h2{font-size:4em;color:#ffc107;line-height:1em}.contextBox .content h2 span{color:#333;font-size:.75em;text-transform:uppercase}
+.contextBox .content p{font-weight:300}.contextBox .content a{display:inline-block;padding:10px 20px;background:#0d6efd;color:#fff;margin-top:15px;text-transform:none;border-radius:10px}.close{position:absolute;top:20px;right:20px;width:40px;height:40px;background:#f3f3f3 url(./images/close.png);background-repeat:no-repeat;background-size:10px;background-position:center;cursor:pointer;border-radius:50%;z-index:10}
+@media (max-width:600px){.contextBox .imgBx img{position:relative;max-width:165px;z-index:1}.contextBox .imgBx::before{content:"";position:absolute;width:142px;height:177px;background:#e7ffe0;border-radius:50%}.contextBox .content h3{color:#000;line-height:1em;font-weight:300;font-size:1.5}
+.contextBox .content h2{font-size:2em;color:#ffc107;line-height:1em}.contextBox .content p{font-weight:300;font-size:14px}.contextBox{position:relative;width:329px;height:370px}.contextBox .content a{display:inline-block;padding:6px 7px;background:#0d6efd;color:#fff;margin-top:15px;text-transform:none;border-radius:10px}
+.contextBox .imgBx img{position:relative;max-width:57px;z-index:1}.contextBox .imgBx::before{content:"";position:absolute;width:74px;height:83px;background:#e7ffe0;border-radius:50%}.contextBox .content{position:relative;width:479px;height:400px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.close{position:absolute;top:20px;right:20px;width:24px;height:26px;background:#f3f3f3 url(./images/close.png);background-repeat:no-repeat;background-size:10px;background-position:center;cursor:pointer;border-radius:50%;z-index:10}}
+
+
+
+
+</style>
+
+
+
+
+</body>
+</html>
